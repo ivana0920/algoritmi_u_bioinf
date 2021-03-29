@@ -3,7 +3,7 @@ def kmer(text, i, k):
     return text[i:(i+k)]
 
 def kmersfrequency(text, k):
-    D = dict()     #riječnik
+    D = dict()     
     for i in range(0, len(text) - k + 1):
         tmp = kmer(text, i, k)
         try:
