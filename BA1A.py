@@ -1,7 +1,9 @@
 #PODSTRING OD STRINGA TEXT OD I-TE DO I+K-TE POZICIJE
+#http://rosalind.info/problems/ba1a/
+
 def kmer(text, i, k):
     return text[i:(i+k)]
-#KOLIKO PUTA SE PATTERN POJAVIO U TEXT
+
 def patterncount(text, pattern):
     count = 0
     np = len(pattern)
