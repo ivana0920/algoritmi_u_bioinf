@@ -1,4 +1,5 @@
 #Find the Most Frequent Words in a String
+#http://rosalind.info/problems/ba1b/
 def kmer(text, i, k):
     return text[i:(i+k)]
 
