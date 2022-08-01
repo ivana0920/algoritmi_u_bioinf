@@ -1,5 +1,6 @@
-#BA1A
-#http://rosalind.info/problems/ba1a/
+# BA1A
+# http://rosalind.info/problems/ba1a/
+# Compute the Number of Times a Pattern Appears in a Text
 
 def kmer(text, i, k):
     return text[i:(i+k)]
@@ -13,4 +14,3 @@ def patterncount(text, pattern):
     return count
 
 print(patterncount('GCGCG','GCG'))
-
