@@ -1,4 +1,4 @@
-#PODSTRING OD STRINGA TEXT OD I-TE DO I+K-TE POZICIJE
+#BA1A
 #http://rosalind.info/problems/ba1a/
 
 def kmer(text, i, k):
