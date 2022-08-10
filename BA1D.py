@@ -6,10 +6,10 @@ def kmer(text,i,k):
   return text[i:(i+k)]
 
 def possition(pattern,text):
-  niz=[]
+  rez=""
   for i in range(0,len(text)-len(pattern)+1):
     if(kmer(text,i,len(pattern))==pattern):
-      niz.append(i)
-  return niz
+      rez= rez + str(i) +" "
+  return rez
 
 print(possition("ATAT","GATATATGCATATACTT"))
