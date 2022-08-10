@@ -1,5 +1,7 @@
-#Find a Profile-most Probable k-mer in a String
-#http://rosalind.info/problems/ba1c/
+# BA1C
+# http://rosalind.info/problems/ba1c/
+# Find a Profile-most Probable k-mer in a String
+
 
 def comp(text):
     pattern=""
@@ -16,4 +18,4 @@ def comp(text):
             return "Greška pri unosu"
     return pattern
 
-print(comp('AAAACCCGGT'))
+print(comp("AAAACCCGGT"))
