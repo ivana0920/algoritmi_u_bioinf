@@ -19,4 +19,4 @@ def mostfrequentkmers(text, k):
     D = kmersfrequency(text, k)
     return dict.fromkeys([x[0] for x in D.items() if x[1] == max(D.values())],max(D.values()))
 
-print(mostfrequentkmers('ACGTTGCATGTCGCATGATGCATGAGAGCT',4))
+print(mostfrequentkmers("ACGTTGCATGTCGCATGATGCATGAGAGCT",4))
