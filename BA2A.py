@@ -33,16 +33,16 @@ def MotifEnumeration(dna,k,d):
   rez=set()
   SviKmeri=sviKmeri(k)
   for linija in dna:
-    for i in range (0,len(linija)-k+1):
+    for i in range(0,len(linija)-k+1):
       pattern=linija[i:i+k]
-      for j in range (0,len(SviKmeri)):
+      for j in range(0,len(SviKmeri)):
         pattern2=SviKmeri[j]
         if HemmingDistance(pattern,pattern2)<=d:
           a=0
-          for l in range (0,len(dna)):
+          for l in range(0,len(dna)):
             a+=approximateCount(pattern2,dna[l],d)
           if a>=len(dna):
-              rez.add(pattern)
+              rez.add(pattern2)
   return rez
   
   
