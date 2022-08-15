@@ -26,7 +26,7 @@ def approximateCount(pattern,text,d):
   for i in range(0,len(text)-len(pattern)+1):
     pattern2=text[i:i+len(pattern)]
     if HemmingDistance(pattern,pattern2)<=d:
-      count+=1
+      count=1     
   return count
 
 def MotifEnumeration(dna,k,d):
