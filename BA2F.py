@@ -4,12 +4,7 @@
 
 import random
 
-def HammingDistance(p,q):
-  br=0
-  for i in range(0,len(p)):
-    if p[i]!=q[i]:
-      br+=1
-  return br
+vidi biljeznicu ao ti bude trebalo
 
 
 x="""
