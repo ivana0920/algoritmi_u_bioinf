@@ -4,7 +4,7 @@
 
 def StringSpelledGenomePathProblem(kmers):
   rez=kmers[0]
-  for i in range(0,len(kmers)):
+  for i in range(1,len(kmers)):
     rez+=kmers[i][-1]
   return rez
 
