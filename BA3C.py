@@ -13,7 +13,7 @@ def Overlap(patterns):
   for pattern1 in patterns:
     for pattern2 in patterns:
       if Sufix(pattern1)==Prefix(pattern2):
-        rez.append(pattern1+"->"+pattern2)
+        rez.append(pattern1+" -> "+pattern2)
   return rez
 
 x="""
