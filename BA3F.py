@@ -43,5 +43,5 @@ for i in range (len(temp)):
 rez=EulerianCycle(putovi)
 ispis=rez[0]
 for i in range (1,len(rez)):
-  ispis+=" -> "+ rez[i]
+  ispis+="->"+ rez[i]
 print(ispis)
