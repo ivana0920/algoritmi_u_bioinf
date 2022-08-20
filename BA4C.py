@@ -10,11 +10,11 @@ def Masa(peptide):
     rez+=tablica[x]
   return rez
 
-def Ciklicki(text,i):
+def Ciklicki(text,k):
   rez=text
-  for i in range(0,i-1):
+  for i in range(0,k-1):
     rez+=text[i]
-  if i==1:
+  if k==1:
     return text
   else:
     return rez
@@ -30,7 +30,6 @@ def Cyclospectrum(peptide):
   rez.append(0)
   rez.append(Masa(peptide))
   return sorted(rez)
-
 
 rez=""
 for x in Cyclospectrum("LEQN"):
