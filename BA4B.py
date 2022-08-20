@@ -32,7 +32,7 @@ def ProteinTranslation(text):
 def PeptideEncoding(dna,amino):
   n=3*len(amino)
   res=list()
-  for i in range(0, len(dna)-n+1):
+  for i in range(0, len(dna)-n):
     kmer=dna[i:i+n]
     pep=ProteinTranslation(Zamjena(kmer))
     pep2=ProteinTranslation(Zamjena(KomplementarnaNit(kmer)))
