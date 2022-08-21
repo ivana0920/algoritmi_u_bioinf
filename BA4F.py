@@ -11,11 +11,13 @@ def Masa(peptide):
   return rez
 
 def EsperimentalniSpektar(peptide):
-  subPeptides=["",peptide]
+  subPeptides=dict()
   var=peptide+peptide
   for i in range(1,len(peptide)):
         for j in range(0,len(peptide)):
             subPeptides.append(var[j:j+i])
+  subPeptides.append(0)
+  subPeptides.append(Masa(peptide))
     
   spectrum=[]
   for x in subPeptides:
