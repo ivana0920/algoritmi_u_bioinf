@@ -7,7 +7,7 @@ import math
 def DPChange(money,strCoins):
   coins=[int(x) for x in strCoins]
   minCoins=[0]*(money+1)
-  for m in range(1,money+1):
+  for m in range(0,money+1):
     minCoins[m]=math.inf
     for i in range(1,len(coins)):
       if m>=coins[i]:
