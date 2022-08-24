@@ -2,8 +2,7 @@
 # Compute the Number of Breakpoints in a Permutation
 # https://rosalind.info/problems/ba6b/
 
-ef Breakpoints(P):
-  print(P)
+def Breakpoints(P):
   rez=0
   for i in range(0,len(P)-1):
     if P[i+1]-P[i]!=1:
