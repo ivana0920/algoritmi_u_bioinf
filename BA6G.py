@@ -17,7 +17,6 @@ tmp=x[1:-1].split()
 cvorovi=list()
 for x in tmp:
   cvorovi.append(int(x))
-len(cvorovi)
 rez=CycleToChromosome(cvorovi)
 rez=["+"+str(x) if x>0 else str(x) for x in rez]
 rez="("+" ".join(rez)+")"
