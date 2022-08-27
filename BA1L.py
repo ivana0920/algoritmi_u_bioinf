@@ -2,7 +2,7 @@
 # Implement PatternToNumber
 # https://rosalind.info/problems/ba1l/
 
-def SimbolToNumber(symbol):
+def SymbolToNumber(symbol):
   if symbol=="A":
     return 0
   elif symbol=="C":
@@ -10,22 +10,13 @@ def SimbolToNumber(symbol):
   elif symbol=="G":
     return 2
   else:
-    return 3  
+    return 3
 
 def PatternToNumber(pattern):
   if pattern=="":
     return 0
   symbol=pattern[-1]
   prefix=pattern[:-1]
-  return 4*PatternToNumber(prefix)+SimbolToNumber(symbol)
+  return 4*PatternToNumber(prefix)+SymbolToNumber(symbol)
 
-def FrequencyArray(text,k):
-  FArray=[0]*(4**k)
-  for i in range(0,len(text)-k+1):
-    pattern=text[i:i+k]
-    j=PatternToNumber(pattern)
-    FArray[j]=FArray[j]+1
-  return FArray  
-
-
-print(FrequencyArray("ACGCGGCTCTGAAA",2))
+print(PatternToNumber("AGT"))
