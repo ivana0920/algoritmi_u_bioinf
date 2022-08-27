@@ -2,21 +2,19 @@
 # http://rosalind.info/problems/ba1b/
 # Find the Most Frequent Words in a String
 
-def kmer(text, i, k):
-    return text[i:(i+k)]
+def FrequentWords(text,k):
+  rez=dict()
+  for i in range(0,len(text)-k+1):
+    try:
+      rez[text[i:i+k]]+=1
+    except KeyError:
+      rez[text[i:i+k]]=1
+  return [x[0] for x in rez.items() if x[1]==max(rez.values())]
 
-def kmersfrequency(text, k):
-    D = dict()     
-    for i in range(0, len(text) - k + 1):
-        tmp = kmer(text, i, k)
-        try:
-            D[tmp] += 1
-        except KeyError:
-            D[tmp] = 1
-    return(D)
-
-def mostfrequentkmers(text, k):
-    D = kmersfrequency(text, k)
-    return dict.fromkeys([x[0] for x in D.items() if x[1] == max(D.values())],max(D.values()))
-
-print(mostfrequentkmers("ACGTTGCATGTCGCATGATGCATGAGAGCT",4))
+x="""ACGTTGCATGTCGCATGATGCATGAGAGCT
+4"""
+inlines=x.split()
+text=inlines[0]
+k=int(inlines[1])
+rez=FrequentWords(text,k)
+print(" ".join(rez))
