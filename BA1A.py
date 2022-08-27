@@ -2,11 +2,16 @@
 # http://rosalind.info/problems/ba1a/
 # Compute the Number of Times a Pattern Appears in a Text
 
-def PatternCount(text,pattern):
-  count=0
+def Count(text, pattern):
+  rez=0
   for i in range(0,len(text)-len(pattern)+1):
     if text[i:i+len(pattern)]==pattern:
-      count+=1
-  return count
+      rez+=1
+  return rez
 
-print(PatternCount("GCGCG","GCG"))
+x="""GCGCG
+GCG"""
+inlines=x.split()
+text=inlines[0]
+pattern=inlines[1]
+print(Count(text, pattern))
