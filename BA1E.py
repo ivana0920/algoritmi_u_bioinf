@@ -1,28 +1,31 @@
-# BA1B
+# BA1E
 # Find Patterns Forming Clumps in a String
 # https://rosalind.info/problems/ba1e/
 
-def kmer(text,i,k):
-  return text[i:(i+k)]
-
-def kmersfrequency(text,k):
-  D=dict()
-  for i in range(0, len(text) - k + 1):
-    temp=kmer(text,i,k)
+def FrequentWords(text,k):
+  rez=dict()
+  for i in range(0,len(text)-k+1):
     try:
-      D[temp]= D[temp]+1
+      rez[text[i:i+k]]+=1
     except KeyError:
-      D[temp]=1
-  return D
+      rez[text[i:i+k]]=1  
+  return rez
 
-def clumps(text,k,L,t):
-  lista=[]
-  for i in range (0,len(text)-L+1):
-    D=kmersfrequency(text[i:(i+L)],k)
-    for j in D:
-      if (D[j]>=t):
-        if j not in lista:
-          lista.append(j)
-  return lista
-  
-  print(clumps("CGGACTCGACAGATGTGAAGAAATGTGAAGACTGAGTGAAGAGAAGAGGAAACACGACACGACATTGCGACATAATGTACGAATGTAATGTGCCTATGGC",5,75,4))
+def Clump(text,k,l,t):
+  rez=set()
+  for i in range(0,len(text)-l):
+    rijecnik=FrequentWords(text[i:i+l],k)
+    for x in rijecnik.items():
+      if x[1]>=t:
+        rez.add(x[0])
+  return rez
+
+x="""CGGACTCGACAGATGTGAAGAAATGTGAAGACTGAGTGAAGAGAAGAGGAAACACGACACGACATTGCGACATAATGTACGAATGTAATGTGCCTATGGC
+5 75 4"""
+inlines=x.split()
+text=inlines[0]
+k=int(inlines[1])
+l=int(inlines[2])
+t=int(inlines[3])
+rez=Clump(text,k,l,t)
+print(" ".join(rez))
