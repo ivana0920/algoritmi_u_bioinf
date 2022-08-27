@@ -13,7 +13,7 @@ def FrequentWords(text,k):
 
 def Clump(text,k,l,t):
   rez=set()
-  for i in range(0,len(text)-l):
+  for i in range(0,len(text)-l+1):
     rijecnik=FrequentWords(text[i:i+l],k)
     for x in rijecnik.items():
       if x[1]>=t:
