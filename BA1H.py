@@ -13,11 +13,19 @@ def HammingDistance(p,q):
     return rez 
 
 def approximate(pattern,text,d):
-  rez=[]
+  rez=list()
   for i in range (0,len(text)-len(pattern)+1):
     if HammingDistance(pattern,text[i:i+len(pattern)])<=d:
-      rez.append(i)
+      rez.append(str(i))
   return rez
 
 
-print(approximate("ATTCTGGA","CGCCCGAATCCAGAACGCATTCCCATATTTCGGGACCACTGGCCTCCACGGTACGGACGTCAATCAAATGCCTAGCGGCTTGTGGTTTCTCCTACGCTCC",3))
+x="""ATTCTGGA
+CGCCCGAATCCAGAACGCATTCCCATATTTCGGGACCACTGGCCTCCACGGTACGGACGTCAATCAAATGCCTAGCGGCTTGTGGTTTCTCCTACGCTCC
+3"""
+inlines=x.split()
+pattern=inlines[0]
+text=inlines[1]
+d=int(inlines[2])
+rez=approximate(pattern,text,d)
+print(" ".join(rez))
