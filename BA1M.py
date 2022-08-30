@@ -22,4 +22,9 @@ def NumberToPattern(index,k):
   return prefixPattern+symbol
 
 
-print(NumberToPattern(45,4))
+x="""45
+4"""
+inlines=x.split()
+index=int(inlines[0])
+k=int(inlines[1])
+print(NumbertoPattern(index,k))
