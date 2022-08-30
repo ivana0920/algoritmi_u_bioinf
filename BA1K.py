@@ -28,4 +28,12 @@ def FrequencyArray(text,k):
   return FArray  
 
 
-print(FrequencyArray("ACGCGGCTCTGAAA",2))
+x="""ACGCGGCTCTGAAA
+2"""
+inlines=x.split()
+text=inlines[0]
+k=int(inlines[1])
+rez=FrequencyArray(text,k)
+for i in range(0,len(rez)):
+  rez[i]=str(rez[i])
+print(" ".join(rez))
