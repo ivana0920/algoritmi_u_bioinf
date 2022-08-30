@@ -56,4 +56,11 @@ def FrequentWordsWithMismatchesAndReverse(text,k,d):
   return rez
 
 
-print(FrequentWordsWithMismatchesAndReverse("ACGTTGCATGTCGCATGATGCATGAGAGCT",4,1))
+x="""ACGTTGCATGTCGCATGATGCATGAGAGCT
+4 1"""
+inlines=x.split()
+text=inlines[0]
+k=int(inlines[1])
+d=int(inlines[2])
+rez=FrequentWordsWithMismatchesAndReverse(text,k,d)
+print(" ".join(rez))
