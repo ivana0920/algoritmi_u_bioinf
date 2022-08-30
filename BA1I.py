@@ -41,4 +41,11 @@ def MostFrequentWordsWithMismatches(text,k,d):
   return rezultat
 
 
-print(MostFrequentWordsWithMismatches("ACGTTGCATGTCGCATGATGCATGAGAGCT",4,1))
+x="""ACGTTGCATGTCGCATGATGCATGAGAGCT
+4 1"""
+inlines=x.split()
+text=inlines[0]
+k=int(inlines[1])
+d=int(inlines[2])
+rez=MostFrequentWordsWithMismatches(text,k,d)
+print(" ".join(rez))
