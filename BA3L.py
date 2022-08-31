@@ -18,10 +18,7 @@ def GappedGenomePath(k,d,sequence):
     for i in range(k+d+1,len(prefix)):
         if prefix[i]!=sufix[i-k-d]:
             return "there is no string spalled by the gapped patterns"
-    return prefix+sufix[(len(sufix)-k-d):]
-            return "nema takvog niza"
-    return prefix+sufix[(len(sufix)-k-d):]
-  
+    return prefix+sufix[(len(sufix)-k-d):]  
   
 x="""
 4 2
